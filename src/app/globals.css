@@ -36,3 +36,10 @@ body {
 .enter-button:hover::after {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .nav img {
+    max-width: 75px;
+    height: 75px;
+  }
+}

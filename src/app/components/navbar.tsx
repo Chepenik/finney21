@@ -4,7 +4,7 @@ import finny from '../../../public/F21secondarygreylogo.png';
 
 export default function Navbar() {
   return (
-    <div className="nav fixed top-10 left-0 flex items-center justify-between h-16 px-8">
+    <div className="nav fixed top-10 left-0 flex items-center justify-between h-8 px-8">
       <Link href="/">
         <Image
           src={finny}
