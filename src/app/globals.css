@@ -2,12 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: Courier New OS, monospace;
-}
-
 body {
   background-color: #F4F4F4;
+  font-family: Fira code,
 }
 
 .enter-button {
@@ -16,8 +13,8 @@ body {
   border-radius: 5px;
   background-color: #F4F4F4;
   color: black;
+  font-family: Courier New OS, monospace;
 
-  /* Hover effect styling */
   position: relative;
   transition: all 0.3s ease;
 }
