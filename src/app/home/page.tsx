@@ -7,6 +7,7 @@ export default function Home() {
     <div className="bg-gray-100 h-screen flex flex-col justify-center items-center text-center p-8">
       <Navbar />
         <br />
+        <br />
         <p className="text-4xl mb-8">
             Bitcoin is portfolio insurance against systemic risks  
         </p>

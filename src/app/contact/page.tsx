@@ -35,17 +35,17 @@ const ContactSection: React.FC = () => {
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen bg-062343 text-white">
-      <h2 className="text-4xl text-gray-500 font-semibold mb-4">Contact Us</h2>
+      <h2 className="text-4xl text-gray-300 font-semibold mb-4">Contact Us</h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col items-center">
-        <label htmlFor="email" className="text-lg text-gray-500 mb-2">Email:</label>
+        <label htmlFor="email" className="text-lg text-gray-400 mb-2">Email:</label>
         <input 
           type="email"
           id="email"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)} 
-          className="border rounded-lg text-gray-500 px-4 py-2 w-64 focus:outline-none focus:border-orange-500" 
+          className="border rounded-lg text-gray-300 px-4 py-2 w-64 focus:outline-none focus:border-orange-500" 
           placeholder="Enter your email" 
           required
         />
@@ -62,7 +62,7 @@ const ContactSection: React.FC = () => {
           required
         />
 
-        <label htmlFor="message" className="text-lg text-gray-500 mb-2 mt-4">Message:</label>
+        <label htmlFor="message" className="text-lg text-gray-600 mb-2 mt-4">Message:</label>
         <textarea
           id="message"
           name="message"
