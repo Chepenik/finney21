@@ -15,8 +15,8 @@ export default function Home() {
         <Image  
           alt="Logo"
           src={finny}
-          width={300}
-          height={300} 
+          width={600}
+          height={600} 
         />
       </div>
 
