@@ -16,7 +16,7 @@ export default function Home() {
             We help individuals, companies and family offices understand, acquire and custody bitcoin
         </p>
           <br />
-        <p className="text-gray-500 mb-8">
+        <p className="text-gray-300 mb-8">
             This website will be updated with a contact form on 10.24.23
         </p>
 
