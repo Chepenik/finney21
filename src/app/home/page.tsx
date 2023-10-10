@@ -19,6 +19,10 @@ export default function Home() {
         <p className="text-gray-300 mb-8">
             This website will be updated with a contact form on 10.24.23
         </p>
+        <p className="text-gray-500 mb-8">
+        npub1ks2lwal5ewlzpsgvtsc82kteszpyvnjcnfypmzepw5kd3pvaxtaq9fpkex
+        </p>
+
 
     </div>
   )
