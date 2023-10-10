@@ -1,5 +1,6 @@
 import Navbar from '../components/navbar';
 import Link from 'next/link';
+import MyButton from '../components/button';
 
 export default function Home() {
 
@@ -22,8 +23,7 @@ export default function Home() {
         <p className="text-gray-500 mb-8">
         npub1ks2lwal5ewlzpsgvtsc82kteszpyvnjcnfypmzepw5kd3pvaxtaq9fpkex
         </p>
-
-
+        <MyButton />
     </div>
   )
 }
