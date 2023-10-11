@@ -3,9 +3,9 @@ import MyButton from '../components/button';
 
 export default function Home() {
   return (
-    <div className="bg-gray-100 h-screen flex flex-col justify-start items-center text-center p-8 pt-32">
+    <div className="bg-gray-100 h-screen flex flex-col lg:flex-row lg:justify-center lg:items-center text-center p-8 pt-32">
       <Navbar />
-      <div className="mt-12"> 
+      <div className="mt-12 lg:mt-0 lg:flex lg:flex-col lg:justify-center lg:items-center"> 
         <p className="text-4xl mb-8">
           Bitcoin is portfolio insurance against systemic risks  
         </p>
@@ -20,4 +20,3 @@ export default function Home() {
     </div>
   );
 }
-
