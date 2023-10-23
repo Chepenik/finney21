@@ -173,10 +173,10 @@ const ContactSection: React.FC = () => {
     {showModal && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-semibold mb-4 text-green-500">Your info has been submitted. We will be in touch!</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-gray-500">Your info has been submitted. We will be in touch!</h3>
             <button 
               onClick={() => setShowModal(false)}
-              className="mt-4 bg-blue-300 hover:bg-green-400 text-white py-2 px-4 rounded-full focus:outline-none"
+              className="mt-4 bg-grey-500 hover:bg-black text-white py-2 px-4 rounded-full focus:outline-none"
             >
               Close
             </button>
