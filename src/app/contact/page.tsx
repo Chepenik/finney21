@@ -35,7 +35,11 @@ const ContactSection: React.FC = () => {
       body: JSON.stringify(formData)
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data);
+      console.log("Submission successful");
+      setShowModal(true);
+    })
     .catch(error => console.log(error));
 
     // Reset form fields
