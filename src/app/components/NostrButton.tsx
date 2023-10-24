@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const MyButton = () => {
+const NostrButton = () => {
   return (
     <div className="flex justify-center items-center my-8">
       <a
@@ -22,4 +22,4 @@ const MyButton = () => {
   );
 };
 
-export default MyButton;
+export default NostrButton;

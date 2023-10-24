@@ -1,5 +1,6 @@
 import Navbar from '../components/navbar';
-import MyButton from '../components/button';
+import NostrButton from '../components/NostrButton';
+import ContactButton from '../components/contactbutton';
 
 export default function Home() {
   return (
@@ -12,10 +13,8 @@ export default function Home() {
         <p className="text-2xl mb-8">
           We help individuals, companies and family offices understand, acquire and custody bitcoin
         </p>
-        <p className="text-gray-300 mb-8">
-          This website will be updated with a contact form on 10.24.23
-        </p>
-        <MyButton />
+        <ContactButton />
+        <NostrButton />
       </div>
     </div>
   );
