@@ -40,7 +40,7 @@ const ContactSection: React.FC = () => {
   
       if (data) {
         console.log("Submission successful");
-        window.location.href = '/thank-you';  // Redirect to thank-you page
+        window.location.href = '/thank-you';  
       }
     } catch (error) {
       console.log(error);
@@ -58,27 +58,40 @@ const ContactSection: React.FC = () => {
           </div>
         </div>
       )}
-        <section className="mt-10 w-full max-w-lg mx-auto flex flex-col rounded-2xl items-center justify-center bg-gray-700 text-white">
-        <p className="m-4">
-          Finney21 is a full service Bitcoin consulting firm
-        </p>
-        <p className="m-4">
-          We&apos;re a hardcore team of specialists on a mission to accelerate the transition to scarce money
-        </p>
-        <p className="m-4">
-          We do that by helping individuals, companies and family offices understand, acquire and custody bitcoin
-        </p>
-        <p className="m-4">
-          To connect with our team, begin by answering these 7 questions:
-        </p>
+      <section className="px-4 mt-4 mb-4 mr-4 ml-4 flex flex-col rounded-2xl items-center justify-center bg-gray-700 text-white md:mt-10 md:px-0 md:max-w-lg md:mx-auto">
+        
+        <div className="w-full">
+          <p className="text-base sm:text-lg m-4 text-center">
+            Finney21 is a full service Bitcoin consulting firm  
+          </p>
+        </div>
+
+        <div className="w-full">
+          <p className="text-base sm:text-lg m-4 text-center">
+            We&apos;re a hardcore team of specialists on a mission to accelerate the transition to scarce money
+          </p>  
+        </div>
+
+        <div className="w-full">
+          <p className="text-base sm:text-lg m-4 text-center">
+            We do that by helping individuals, companies and family offices understand, acquire and custody bitcoin
+          </p>
+        </div>
+
+        <div className="w-full">
+          <p className="text-base sm:text-lg m-4 text-center">
+            To connect with our team, begin by answering these 7 questions:
+          </p>
+        </div>
+        
       </section>
 
-      <section className="flex flex-col items-center justify-center min-h-screen bg-062343 text-white">
+      <section className="px-4 mb-4 flex flex-col items-center justify-center min-h-screen bg-062343 text-white">
   
         <form
           onSubmit={handleSubmit}
-          className="max-w-lg mx-auto flex flex-col space-y-4"  
-        >
+          className="max-w-md sm:max-w-lg mx-auto w-full flex flex-col space-y-6 sm:space-y-4"
+          >
         
           <div>
             <label className="text-lg text-black font-medium">What’s your name?</label>
@@ -179,7 +192,7 @@ const ContactSection: React.FC = () => {
   
           <button
           type="submit"
-          className="w-1/2 mx-auto bg-gray-700 hover:bg-black text-white py-2 px-6 rounded-full"
+          className="w-1/2 mx-auto mb-8 bg-gray-700 hover:bg-black text-white py-2 px-6 rounded-full"
         >
           Submit
         </button>
