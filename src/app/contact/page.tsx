@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-const ContactSection: React.FC<{ router: any }> = ({ router }) => {
+const ContactSection: React.FC = () => {
   const [name, setName] = useState('');
   const [country, setCountry] = useState('');
   const [ownsBitcoin, setOwnsBitcoin] = useState('');
@@ -60,16 +60,16 @@ const ContactSection: React.FC<{ router: any }> = ({ router }) => {
       )}
         <section className="mt-10 w-full max-w-lg mx-auto flex flex-col rounded-2xl items-center justify-center bg-gray-700 text-white">
         <p className="m-4">
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Finney21 is a full service Bitcoin consulting firm
         </p>
         <p className="m-4">
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          We&apos;re a hardcore team of specialists on a mission to accelerate the transition to scarce money
         </p>
         <p className="m-4">
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          We do that by helping individuals, companies and family offices understand, acquire and custody bitcoin
         </p>
         <p className="m-4">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          To connect with our team, begin by answering these 7 questions:
         </p>
       </section>
 
