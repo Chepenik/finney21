@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 const ContactButton = () => {
   return (
@@ -11,9 +10,7 @@ const ContactButton = () => {
       >
         <span className="mx-auto text-center z-20">Contact Us</span>
         <div className="bg-gray-500 flex items-center justify-center rounded-full w-16 h-16 absolute right-0 top-1/2 transform -translate-y-1/2 z-20">
-          <div className="w-16 h-16 relative">
-            <Image src="/bitcoinlogo.png" alt="Bitcoin Logo" className="absolute inset-0 object-cover w-full h-full rounded-full" width={48} height={48}/>
-          </div>
+          <span className="text-4xl text-white">&#x20BF;</span>
         </div>
         <div className="before-effect absolute inset-0 w-full h-full bg-transparent transition-all duration-500 ease-out rounded-full group-hover:bg-gray-500 z-10"></div>
       </a>
