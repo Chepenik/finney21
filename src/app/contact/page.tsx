@@ -44,8 +44,9 @@ const ContactSection: React.FC = () => {
       }
     } catch (error) {
       console.log(error);
+      window.location.href = '/error';
     } finally {
-      setIsLoading(false);
+      setIsLoading(false); 
     }
   };
 
@@ -190,16 +191,13 @@ const ContactSection: React.FC = () => {
             />
           </div>
   
-          <button
-          type="submit"
-          className="w-1/2 mx-auto mb-8 bg-gray-700 hover:bg-black text-white py-2 px-6 rounded-full"
-        >
-          Submit
-        </button>
-
-        
+            <button
+            type="submit"
+            className="w-1/2 mx-auto mb-8 bg-gray-700 hover:bg-black text-white py-2 px-6 rounded-full"
+          >
+            Submit
+          </button>  
         </form>
-  
       </section>
     </>
   );
