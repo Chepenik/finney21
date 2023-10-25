@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Finney 21',
-  description: 'Bitcoin Consulting For The Best',
+  description: 'Bitcoin only. There is no second best',
 }
 
 export default function RootLayout({
