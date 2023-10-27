@@ -3,9 +3,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import finny from '../../public/F21Primarylogo.png';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+
 export default function Home() {
+  const hasLogged = useRef(false);
+
+  useEffect(() => {
+    if (!hasLogged.current) {
+      console.log('Want a website like this? Visit https://magicwebstore.xyz/index.html?pubkey=02b1a6c208420d3eb5a625aa8c79689e1dd4ea94f82286d06e1df7a05e2c3a482f&relays=%5B%22wss://nostrue.com%22,%22wss://relayable.org%22,%22wss://nostr.oxtr.dev%22%5D');
+      hasLogged.current = true;
+    }
+  }, []);
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -31,5 +39,4 @@ export default function Home() {
       </Link>
     </div>
   );
-
 }
