@@ -7,7 +7,7 @@ const ContactSection: React.FC = () => {
 
   useEffect(() => {
     if(!hasLogged.current){
-      console.log('Want a website like this? Visit https://magicwebstore.xyz/index.html?pubkey=02b1a6c208420d3eb5a625aa8c79689e1dd4ea94f82286d06e1df7a05e2c3a482f&relays=%5B%22wss://nostrue.com%22,%22wss://relayable.org%22,%22wss://nostr.oxtr.dev%22%5D')
+      console.log('Want a website like this? Hit my DMS @ https://x.com/ConorChepenik')
       hasLogged.current = true;
     }
   }, [])
@@ -15,10 +15,8 @@ const ContactSection: React.FC = () => {
   const [name, setName] = useState('');
   const [country, setCountry] = useState('');
   const [ownsBitcoin, setOwnsBitcoin] = useState('');
-  const [inquiryType, setInquiryType] = useState('');
-  const [budget, setBudget] = useState('');
-  const [commitStudy, setCommitStudy] = useState('');
-  const [emailOrKey, setEmailOrKey] = useState('');
+  const [studyHours, setStudyHours] = useState('');
+  const [helpNeeded, setHelpNeeded] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -29,14 +27,12 @@ const ContactSection: React.FC = () => {
       name,
       country,
       ownsBitcoin,
-      inquiryType,
-      budget,
-      commitStudy,
-      emailOrKey
+      studyHours,
+      helpNeeded
     };
   
     try {
-      const response = await fetch("https://formsubmit.co/ajax/btcdiplomat1@tutanota.com", {
+      const response = await fetch("https://formsubmit.co/ajax/FinneyFarm@proton.me", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
@@ -60,7 +56,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="bg-[#090429] min-h-screen flex flex-col items-center justify-center text-white p-4 md:p-8">
       {isLoading && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg shadow-lg p-8">
@@ -68,147 +64,86 @@ const ContactSection: React.FC = () => {
           </div>
         </div>
       )}
-      <section className="px-4 mt-4 mb-4 mr-4 ml-4 flex flex-col rounded-2xl items-center justify-center bg-gray-700 text-white md:mt-10 md:px-0 md:max-w-lg md:mx-auto">
-        
-        <div className="w-full">
-          <p className="text-base sm:text-lg m-4 text-center">
-            Finney21 is a full service Bitcoin consulting firm  
-          </p>
-        </div>
+      
+      <h1 className="text-2xl md:text-3xl font-mono mb-12">Contact us Form v2.0</h1>
 
-        <div className="w-full">
-          <p className="text-base sm:text-lg m-4 text-center">
-            We&apos;re a hardcore team of specialists on a mission to accelerate the transition to scarce money
-          </p>  
-        </div>
-
-        <div className="w-full">
-          <p className="text-base sm:text-lg m-4 text-center">
-            We do that by helping individuals, companies and family offices understand, acquire and custody bitcoin
-          </p>
-        </div>
-
-        <div className="w-full">
-          <p className="text-base sm:text-lg m-4 text-center">
-            To connect with our team, begin by answering these 7 questions:
-          </p>
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-md flex flex-col space-y-8 font-mono"
+      >
+        <div>
+          <label className="text-xl font-mono">[NAME]</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}  
+            className="w-full bg-transparent border-b border-white px-2 py-1 mt-2 font-mono text-white" 
+            required
+          />
         </div>
         
-      </section>
+        <div>
+          <label className="text-xl font-mono">[COUNTRY]</label>
+          <input 
+            type="text"
+            id="country"
+            name="country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            className="w-full bg-transparent border-b border-white px-2 py-1 mt-2 font-mono text-white" 
+            required
+          />
+        </div>
 
-      <section className="px-4 mb-4 flex flex-col items-center justify-center min-h-screen bg-062343 text-white">
-  
-        <form
-          onSubmit={handleSubmit}
-          className="max-w-md sm:max-w-lg mx-auto w-full flex flex-col space-y-6 sm:space-y-4"
-          >
-        
-          <div>
-            <label className="text-lg text-black font-medium">What’s your name?</label>
-            
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}  
-              className="w-full border rounded px-4 py-2 text-black bg-gray-300" 
-              required
-            />
-          </div>
-          
-          <div>
-            <label className="text-lg text-black font-medium">What country do you live in?</label>
-  
-            <input 
-              type="text"
-              id="country"
-              name="country"
-              value={country}
-              onChange={(e) => setCountry(e.target.value)}
-              className="w-full border rounded px-4 py-2 text-black bg-gray-300" 
-              required
-            />
-          </div>
-  
-          <div>
-            <label className="text-lg text-black font-medium">Do you currently own bitcoin?</label>
-  
-            <select
-              value={ownsBitcoin}
-              onChange={(e) => setOwnsBitcoin(e.target.value)}  
-              className="w-full border rounded px-4 py-2 text-black bg-gray-200"
-            >
-              <option value="">Select an option</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </div>
-  
-          <div>
-            <label className="text-lg text-black font-medium">Is your inquiry personal or business related?</label>
-          
-            <select
-              value={inquiryType}
-              onChange={(e) => setInquiryType(e.target.value)}
-              className="w-full border rounded px-4 py-2 text-black bg-gray-200"
-            >
-              <option value="">Select an option</option>
-              <option value="personal">Personal</option>
-              <option value="business">Business</option>
-            </select>
-          </div>
-  
-          <div>
-            <label className="text-lg text-black font-medium">Do you have a consulting budget in mind? If so, how much? (Sats or $usd)</label>
-  
-            <input
-              type="text"
-              id="budget"
-              name="budget"  
-              value={budget}
-              onChange={(e) => setBudget(e.target.value)}
-              className="w-full border rounded px-4 py-2 text-black bg-gray-300"
-            />
-          </div>
-  
-          <div>
-            <label className="text-lg text-black font-medium">Are you ready to commit 1 weekly hour to studying Bitcoin?</label>
-  
-            <select
-              value={commitStudy}
-              onChange={(e) => setCommitStudy(e.target.value)}
-              className="w-full border rounded px-4 py-2 text-black bg-gray-200"  
-            >
-              <option value="">Select an option</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </div>
-  
-          <div>
-            <label className="text-lg text-black font-medium">What is your email or nostr public key?</label>
-  
-            <input
-              type="text"
-              id="emailOrKey"
-              name="emailOrKey"
-              value={emailOrKey}
-              onChange={(e) => setEmailOrKey(e.target.value)}
-              className="w-full border rounded px-4 py-2 text-black bg-gray-300"
-              required   
-            />
-          </div>
-  
-            <button
-            type="submit"
-            className="w-1/2 mx-auto mb-8 bg-gray-700 hover:bg-black text-white py-2 px-6 rounded-full"
-          >
-            Submit
-          </button>  
-        </form>
-      </section>
-    </>
+        <div>
+          <label className="text-xl font-mono">Do you currently own bitcoin? [Y/N]</label>
+          <input
+            type="text"
+            id="ownsBitcoin"
+            name="ownsBitcoin"
+            value={ownsBitcoin}
+            onChange={(e) => setOwnsBitcoin(e.target.value)}
+            className="w-full bg-transparent border-b border-white px-2 py-1 mt-2 font-mono text-white"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="text-xl font-mono">Are you willing to spend 12 hours studying Bitcoin? [Y/N]</label>
+          <input
+            type="text"
+            id="studyHours"
+            name="studyHours"
+            value={studyHours}
+            onChange={(e) => setStudyHours(e.target.value)}
+            className="w-full bg-transparent border-b border-white px-2 py-1 mt-2 font-mono text-white"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="text-xl font-mono">[What do you need help with? [120 words max]</label>
+          <textarea
+            id="helpNeeded"
+            name="helpNeeded"
+            value={helpNeeded}
+            onChange={(e) => setHelpNeeded(e.target.value)}
+            className="w-full bg-transparent border-b border-white px-2 py-1 mt-2 font-mono text-white h-24"
+            maxLength={120}
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="text-[#FFA500] text-xl font-mono border-b-2 border-[#FFA500] hover:text-white hover:border-white transition-colors self-center mt-8"
+        >
+          SUBMIT
+        </button>  
+      </form>
+    </div>
   );
 };
 

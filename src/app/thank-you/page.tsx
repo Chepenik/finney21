@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import heart from "../../../public/thankyouheartbtc.png";
 import { useEffect, useRef } from 'react';
 
 const ThankYou: React.FC = () => {
@@ -9,23 +8,30 @@ const ThankYou: React.FC = () => {
 
   useEffect(() => {
     if (!hasLogged.current) {
-      console.log('Want a website like this? Visit https://magicwebstore.xyz/index.html?pubkey=02b1a6c208420d3eb5a625aa8c79689e1dd4ea94f82286d06e1df7a05e2c3a482f&relays=%5B%22wss://nostrue.com%22,%22wss://relayable.org%22,%22wss://nostr.oxtr.dev%22%5D');
+      console.log('Want a website like this? Hit my DMS @ https://x.com/ConorChepenik');
       hasLogged.current = true;
     }
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen text-2xl p-4">
-      <h1 className="text-4xl mb-4 text-center">Thanks for getting in touch!</h1>
-      <div className="mb-4">
+    <div className="bg-[#090429] min-h-screen flex flex-col items-center justify-center text-white p-6 md:p-10 font-mono">
+      <h1 className="text-2xl md:text-4xl mb-12 text-center">
+        Thanks you for getting in touch!
+      </h1>
+      
+      <div className="mb-12">
         <Image 
-          src={heart}
-          alt="Thank You Heart"
-          height={200}
-          width={200}
+          src="/thankyou.png"
+          alt="Thank You Bitcoin Heart"
+          width={300}
+          height={300}
+          priority
         />
       </div>
-      <p className="text-center mx-8">Someone from our team will contact you if we are a good fit to work together.</p>
+      
+      <p className="text-xl md:text-2xl text-center max-w-2xl">
+        Someone from our team will be in touch if you we are good fit to work together
+      </p>
     </div>
   );
 };
