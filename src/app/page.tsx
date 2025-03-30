@@ -3,16 +3,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import finny from '../../public/F21Primarylogo.png';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { logOnce } from './utils/logger';
 
 export default function Home() {
-  const hasLogged = useRef(false);
-
   useEffect(() => {
-    if (!hasLogged.current) {
-      console.log('Want a website like this? Visit https://x.com/ConorChepenik also remember there is no second best cryptocurrency');
-      hasLogged.current = true;
-    }
+    logOnce('Want a website like this? Visit https://x.com/ConorChepenik also remember there is no second best cryptocurrency');
   }, []);
 
   const [isHovered, setIsHovered] = useState(false);

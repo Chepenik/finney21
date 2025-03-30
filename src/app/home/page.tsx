@@ -1,16 +1,14 @@
 "use client"
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
+import { logOnce } from '../utils/logger';
 
 export default function Home() {
-  const hasLogged = useRef(false);
   useEffect(() => {
-    if(!hasLogged.current){
-      console.log('Want a website like this? Hit my DMS @ https://x.com/ConorChepenik')
-      hasLogged.current = true;
-    }
-  }, [])
+    logOnce('Want a website like this? Visit https://x.com/ConorChepenik also remember there is no second best cryptocurrency');
+  }, []);
+
   return (
     <div className="bg-[#090429] h-screen flex flex-col items-center justify-between text-center p-4 md:p-6 text-white overflow-hidden">
       <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center space-y-4 md:space-y-6 pt-8 md:pt-10">
