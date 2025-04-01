@@ -20,13 +20,15 @@ const ThankYou: React.FC = () => {
       </h1>
       
       <div className="mb-12">
-        <Image 
-          src="/thankyou.png"
-          alt="Thank You Bitcoin Heart"
-          width={300}
-          height={300}
-          priority
-        />
+        <div className="rounded-[90px] rounded-bl-none overflow-hidden">
+          <Image 
+            src="/thankyou.png"
+            alt="Thank You Bitcoin Heart"
+            width={300}
+            height={300}
+            priority
+          />
+        </div>
       </div>
       
       <p className="text-xl md:text-2xl text-center max-w-2xl">
