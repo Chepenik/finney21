@@ -56,7 +56,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#090429] min-h-screen flex flex-col items-center justify-center text-white p-4 md:p-8">
+    <div className="bg-[#0e132b] min-h-screen flex flex-col items-center justify-center text-white p-4 md:p-8">
       {isLoading && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg shadow-lg p-8">
@@ -138,7 +138,7 @@ const ContactSection: React.FC = () => {
 
         <button
           type="submit"
-          className="text-[#FFA500] text-xl font-mono border-b-2 border-[#FFA500] hover:text-white hover:border-white transition-colors self-center mt-8"
+          className="text-[#F7931A] text-xl font-mono border-b-2 border-[#F7931A] hover:text-white hover:border-white transition-colors self-center mt-8"
         >
           SUBMIT
         </button>  

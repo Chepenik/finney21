@@ -59,13 +59,13 @@ export default function Library() {
         <meta name="description" content="Curated Bitcoin study resources to help you understand Bitcoin fundamentals, economics, and practical applications. Fix the money, fix the world." />
       </Head>
       
-      <div className="bg-[#090429] min-h-screen flex flex-col items-center text-center p-4 md:p-8 text-white">
+      <div className="bg-[#0e132b] min-h-screen flex flex-col items-center text-center p-4 md:p-8 text-white">
         <h1 className="text-2xl md:text-4xl font-mono mt-8 md:mt-12 mb-8">
           Bitcoin Study Resources
         </h1>
         
         <p className="text-lg md:text-xl font-mono mb-8 max-w-3xl">
-          Curated by <a href="https://x.com/NobodyCaribou" target="_blank" rel="noopener noreferrer" className="text-[#FFA500] hover:underline">@NobodyCaribou</a>. We believe in helping others adopt Bitcoin because if you fix the money, you fix the world.
+          Curated by <a href="https://x.com/NobodyCaribou" target="_blank" rel="noopener noreferrer" className="text-[#F7931A] hover:underline">@NobodyCaribou</a>. We believe in helping others adopt Bitcoin because if you fix the money, you fix the world.
         </p>
         
         <div className="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
@@ -108,7 +108,7 @@ export default function Library() {
         </div>
         
         <div className="mt-12 md:mt-16">
-          <Link href="/contact" className="text-[#FFA500] text-xl md:text-2xl font-mono border-b-2 border-[#FFA500] hover:text-white hover:border-white transition-colors">
+          <Link href="/contact" className="text-[#F7931A] text-xl md:text-2xl font-mono border-b-2 border-[#F7931A] hover:text-white hover:border-white transition-colors">
             CONTACT US FOR PERSONALIZED GUIDANCE
           </Link>
         </div>
@@ -135,7 +135,7 @@ interface ResourceSectionProps {
 function ResourceSection({ title, resources }: ResourceSectionProps) {
   return (
     <div className="bg-[#0c062e] p-6 rounded-lg">
-      <h2 className="text-xl font-mono mb-4 text-[#FFA500]">{title}</h2>
+      <h2 className="text-xl font-mono mb-4 text-[#F7931A]">{title}</h2>
       <ul className="space-y-3">
         {resources.map((resource, index) => (
           <li key={index}>
@@ -143,7 +143,7 @@ function ResourceSection({ title, resources }: ResourceSectionProps) {
               href={resource.url} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white hover:text-[#FFA500] transition-colors font-mono text-left block"
+              className="text-white hover:text-[#F7931A] transition-colors font-mono text-left block"
             >
               {resource.title}
             </a>

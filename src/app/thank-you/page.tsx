@@ -14,7 +14,7 @@ const ThankYou: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-[#090429] min-h-screen flex flex-col items-center justify-center text-white p-6 md:p-10 font-mono">
+    <div className="bg-[#0e132b] min-h-screen flex flex-col items-center justify-center text-white p-6 md:p-10 font-mono">
       <h1 className="text-2xl md:text-4xl mb-12 text-center">
         Thanks you for getting in touch!
       </h1>
