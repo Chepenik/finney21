@@ -15,12 +15,13 @@ export const metadata: Metadata = {
     siteName: 'Finney21',
     images: [
       {
-        url: 'https://i.nostr.build/xVS1jA4whkKCbo5M.png',
-        width: 1200,
-        height: 630,
+        url: 'https://i.nostr.build/H6RPpDiRHc5nZmOn.png',
+        width: 600,
+        height: 315,
+        alt: 'Finney21',
       },
     ],
-    locale: 'en-US',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     title: 'Finney21 | Bitcoin Education & Consulting',
     description: 'Curated Bitcoin resources to help you understand and adopt better money',
     creator: '@NobodyCaribou',
-    images: ['https://i.nostr.build/xVS1jA4whkKCbo5M.png'],
+    images: ['https://i.nostr.build/H6RPpDiRHc5nZmOn.png'],
   },
 }
 
