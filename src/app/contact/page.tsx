@@ -17,6 +17,7 @@ const ContactSection: React.FC = () => {
   const [ownsBitcoin, setOwnsBitcoin] = useState('');
   const [studyHours, setStudyHours] = useState('');
   const [helpNeeded, setHelpNeeded] = useState('');
+  const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -25,6 +26,7 @@ const ContactSection: React.FC = () => {
     
     const formData = {
       name,
+      email,
       country,
       ownsBitcoin,
       studyHours,
@@ -98,6 +100,19 @@ const ContactSection: React.FC = () => {
         </div>
 
         <div>
+          <label className="text-base font-mono">[EMAIL]</label>
+          <input 
+            type="email"
+            id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full bg-transparent border-b border-white py-0.5 text-base font-mono text-white" 
+            required
+          />
+        </div>
+
+        <div>
           <label className="text-base font-mono">Do you currently own bitcoin? [Y/N]</label>
           <input
             type="text"
@@ -136,12 +151,14 @@ const ContactSection: React.FC = () => {
           />
         </div>
 
-        <button
-          type="submit"
-          className="text-[#F7931A] text-base font-mono border-b border-[#F7931A] hover:text-white hover:border-white transition-colors self-center mt-2"
-        >
-          SUBMIT
-        </button>  
+        <div className="mt-12 flex justify-center w-full">
+          <button
+            type="submit"
+            className="text-[#F7931A] text-base font-mono border-b border-[#F7931A] hover:text-white hover:border-white transition-colors"
+          >
+            SUBMIT
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -35,11 +35,11 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="flex flex-col space-y-4 sm:space-y-5 md:space-y-6 mt-6 sm:mt-8 md:mt-10">
+        <div className="flex flex-col space-y-4 sm:space-y-5 md:space-y-6 mt-10 sm:mt-14 md:mt-16">
           <Link href="/contact" className="text-[#F7931A] text-base sm:text-lg md:text-2xl font-mono border-b-2 border-[#F7931A] hover:text-white hover:border-white transition-colors">
             CONTACT US
           </Link>
-          <Link href="https://primal.net/p/nprofile1qqs2ml775lku5gz9yf3nuu2cqa7s2gxl7v376xg9fjpnxpu6txuzwdcwgpqxw" className="text-[#F7931A] text-base sm:text-lg md:text-2xl font-mono border-b-2 border-[#F7931A] hover:text-white hover:border-white transition-colors">
+          <Link href="https://primal.net/p/nprofile1qqs2ml775lku5gz9yf3nuu2cqa7s2gxl7v376xg9fjpnxpu6txuzwdcwgpqxw" target="_blank" className="text-[#F7931A] text-base sm:text-lg md:text-2xl font-mono border-b-2 border-[#F7931A] hover:text-white hover:border-white transition-colors">
             LI₿RARY
           </Link>
         </div>
