@@ -34,7 +34,7 @@ const ContactSection: React.FC = () => {
     };
   
     try {
-      const response = await fetch("https://formsubmit.co/ajax/FinneyFarm@proton.me", {
+      const response = await fetch("https://formsubmit.co/ajax/finneyfarms@proton.me", {
         method: "POST",
         headers: { 
           'Content-Type': 'application/json',
